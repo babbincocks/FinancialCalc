@@ -21,44 +21,28 @@ namespace MortgageCalculator
         {
             try
             {
-                double total = 0;
-                double principal = double.Parse(txtInitial.Text);
-                double interest = double.Parse(txtInterest.Text) / 100;
-                double deposit = double.Parse(txtMonthDepo.Text);
-                int years = int.Parse(txtYears.Text);
-                int compound = 0;
-                double depositTotal = 0;
+                if (txtInitial.Text == "" || txtInterest.Text == "" || txtMonthDepo.Text == "" 
+                    || txtYears.Text == "" || cbCompoundRates.SelectedIndex == -1)
+                {
+                    throw new Exception("Please fill in all white text boxes with information, so a proper calculation can be done.");
+                }
+                //else if (cbCompoundRates.SelectedItem.ToString() != "Annually" || 
+                //        cbCompoundRates.SelectedItem.ToString() != "Semi-Annually" || 
+                //        cbCompoundRates.SelectedItem.ToString() != "Quarterly" || 
+                //        cbCompoundRates.SelectedItem.ToString() != "Monthly" )
+                //{
+                //    throw new Exception("Please only use the recommended compounding rates.");
+                //}
+                else
+                {
+                    string a = Financial.CompoundInterest(txtInitial.Text, txtInterest.Text, txtMonthDepo.Text, txtYears.Text, cbCompoundRates.SelectedItem.ToString());
 
-                if (cbCompoundRates.SelectedItem.ToString() == "Annually")
-                {
-
-                    compound = 1;
+                    txtOutput.Text = a;
                 }
-                else if (cbCompoundRates.SelectedItem.ToString() == "Semi-Annually")
-                {
-                    compound = 2;
-                }
-                else if (cbCompoundRates.SelectedItem.ToString() == "Quarterly")
-                {
-                    compound = 4;
-                }
-                else if (cbCompoundRates.SelectedItem.ToString() == "Monthly")
-                {
-                    compound = 12;
-                }
-                else if (cbCompoundRates.SelectedItem.ToString() == "Daily")
-                {
-                    compound = 365;
-                }
-
-                total = principal * Math.Pow((1 + (interest / compound)), (compound * years));
-                depositTotal = deposit * ((Math.Pow(1 + (interest / compound), compound * years) - 1) / (interest / compound));
-                total += depositTotal;
-                txtOutput.Text = total.ToString("c");
             }
             catch (Exception ex)
             {
-                throw ex;
+                MessageBox.Show(ex.Message);
             }
         }
 

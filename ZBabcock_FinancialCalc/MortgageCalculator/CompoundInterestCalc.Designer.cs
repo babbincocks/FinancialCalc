@@ -47,6 +47,7 @@
             this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mortgageCalculatorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.label6 = new System.Windows.Forms.Label();
             this.gbAttributes.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -81,7 +82,7 @@
             // 
             // txtOutput
             // 
-            this.txtOutput.Location = new System.Drawing.Point(254, 139);
+            this.txtOutput.Location = new System.Drawing.Point(266, 142);
             this.txtOutput.Name = "txtOutput";
             this.txtOutput.ReadOnly = true;
             this.txtOutput.Size = new System.Drawing.Size(119, 20);
@@ -89,7 +90,7 @@
             // 
             // btnCalc
             // 
-            this.btnCalc.Location = new System.Drawing.Point(273, 174);
+            this.btnCalc.Location = new System.Drawing.Point(285, 177);
             this.btnCalc.Name = "btnCalc";
             this.btnCalc.Size = new System.Drawing.Size(82, 36);
             this.btnCalc.TabIndex = 6;
@@ -99,7 +100,7 @@
             // 
             // btnClear
             // 
-            this.btnClear.Location = new System.Drawing.Point(273, 232);
+            this.btnClear.Location = new System.Drawing.Point(285, 235);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(82, 36);
             this.btnClear.TabIndex = 7;
@@ -150,8 +151,7 @@
             "Annually",
             "Semi-Annually",
             "Quarterly",
-            "Monthly",
-            "Daily"});
+            "Monthly"});
             this.cbCompoundRates.Location = new System.Drawing.Point(13, 203);
             this.cbCompoundRates.Name = "cbCompoundRates";
             this.cbCompoundRates.Size = new System.Drawing.Size(96, 21);
@@ -191,7 +191,7 @@
             this.fileToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(385, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(397, 24);
             this.menuStrip1.TabIndex = 17;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -209,7 +209,7 @@
             this.openToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mortgageCalculatorToolStripMenuItem});
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
-            this.openToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(100, 22);
             this.openToolStripMenuItem.Text = "Open";
             // 
             // mortgageCalculatorToolStripMenuItem
@@ -222,15 +222,27 @@
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(100, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(296, 127);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(56, 13);
+            this.label6.TabIndex = 18;
+            this.label6.Text = "Final Total";
+            // 
             // frmCompound
             // 
+            this.AcceptButton = this.btnCalc;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(385, 347);
+            this.CancelButton = this.btnClear;
+            this.ClientSize = new System.Drawing.Size(397, 347);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.gbAttributes);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnCalc);
@@ -269,6 +281,7 @@
         private System.Windows.Forms.ToolStripMenuItem openToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem mortgageCalculatorToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
+        private System.Windows.Forms.Label label6;
     }
 }
 
