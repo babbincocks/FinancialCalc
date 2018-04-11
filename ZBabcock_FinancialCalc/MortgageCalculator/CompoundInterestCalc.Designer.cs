@@ -44,8 +44,6 @@
             this.gbAttributes = new System.Windows.Forms.GroupBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.mortgageCalculatorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label6 = new System.Windows.Forms.Label();
             this.gbAttributes.SuspendLayout();
@@ -82,7 +80,7 @@
             // 
             // txtOutput
             // 
-            this.txtOutput.Location = new System.Drawing.Point(266, 142);
+            this.txtOutput.Location = new System.Drawing.Point(266, 155);
             this.txtOutput.Name = "txtOutput";
             this.txtOutput.ReadOnly = true;
             this.txtOutput.Size = new System.Drawing.Size(119, 20);
@@ -90,7 +88,7 @@
             // 
             // btnCalc
             // 
-            this.btnCalc.Location = new System.Drawing.Point(285, 177);
+            this.btnCalc.Location = new System.Drawing.Point(285, 190);
             this.btnCalc.Name = "btnCalc";
             this.btnCalc.Size = new System.Drawing.Size(82, 36);
             this.btnCalc.TabIndex = 6;
@@ -100,7 +98,8 @@
             // 
             // btnClear
             // 
-            this.btnClear.Location = new System.Drawing.Point(285, 235);
+            this.btnClear.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnClear.Location = new System.Drawing.Point(285, 248);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(82, 36);
             this.btnClear.TabIndex = 7;
@@ -178,7 +177,7 @@
             this.gbAttributes.Controls.Add(this.txtMonthDepo);
             this.gbAttributes.Controls.Add(this.txtInterest);
             this.gbAttributes.Controls.Add(this.txtInitial);
-            this.gbAttributes.Location = new System.Drawing.Point(12, 29);
+            this.gbAttributes.Location = new System.Drawing.Point(12, 42);
             this.gbAttributes.Name = "gbAttributes";
             this.gbAttributes.Size = new System.Drawing.Size(236, 242);
             this.gbAttributes.TabIndex = 16;
@@ -198,26 +197,10 @@
             // fileToolStripMenuItem
             // 
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.openToolStripMenuItem,
             this.exitToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(56, 20);
             this.fileToolStripMenuItem.Text = "Options";
-            // 
-            // openToolStripMenuItem
-            // 
-            this.openToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.mortgageCalculatorToolStripMenuItem});
-            this.openToolStripMenuItem.Name = "openToolStripMenuItem";
-            this.openToolStripMenuItem.Size = new System.Drawing.Size(100, 22);
-            this.openToolStripMenuItem.Text = "Open";
-            // 
-            // mortgageCalculatorToolStripMenuItem
-            // 
-            this.mortgageCalculatorToolStripMenuItem.Name = "mortgageCalculatorToolStripMenuItem";
-            this.mortgageCalculatorToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
-            this.mortgageCalculatorToolStripMenuItem.Text = "Mortgage Calculator";
-            this.mortgageCalculatorToolStripMenuItem.Click += new System.EventHandler(this.mortgageCalculatorToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
@@ -229,7 +212,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(296, 127);
+            this.label6.Location = new System.Drawing.Point(296, 140);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(56, 13);
             this.label6.TabIndex = 18;
@@ -241,13 +224,14 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnClear;
-            this.ClientSize = new System.Drawing.Size(397, 347);
+            this.ClientSize = new System.Drawing.Size(397, 339);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.gbAttributes);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnCalc);
             this.Controls.Add(this.txtOutput);
             this.Controls.Add(this.menuStrip1);
+            this.HelpButton = true;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmCompound";
             this.Text = "Compound Interest";
@@ -278,8 +262,6 @@
         private System.Windows.Forms.GroupBox gbAttributes;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem openToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem mortgageCalculatorToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.Label label6;
     }

@@ -18,3 +18,5 @@ C:\Users\Cyberadmin\Desktop\FinancialCalc\ZBabcock_FinancialCalc\MortgageCalcula
 C:\Users\Cyberadmin\Desktop\FinancialCalc\ZBabcock_FinancialCalc\MortgageCalculator\obj\Debug\FinancialCalculator.csproj.CoreCompileInputs.cache
 C:\Users\Cyberadmin\Desktop\FinancialCalc\ZBabcock_FinancialCalc\MortgageCalculator\obj\Debug\MortgageCalculator.exe
 C:\Users\Cyberadmin\Desktop\FinancialCalc\ZBabcock_FinancialCalc\MortgageCalculator\obj\Debug\MortgageCalculator.pdb
+C:\Users\Cyberadmin\Desktop\FinancialCalc\ZBabcock_FinancialCalc\MortgageCalculator\obj\Debug\MortgageCalculator.frmMortgage.resources
+C:\Users\Cyberadmin\Desktop\FinancialCalc\ZBabcock_FinancialCalc\MortgageCalculator\obj\Debug\MortgageCalculator.frmOpenMenu.resources

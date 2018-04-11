@@ -52,10 +52,28 @@
     <Compile Include="CompoundInterestCalc.Designer.cs">
       <DependentUpon>CompoundInterestCalc.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmOpenMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmOpenMenu.Designer.cs">
+      <DependentUpon>frmOpenMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MortgageCalc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MortgageCalc.Designer.cs">
+      <DependentUpon>MortgageCalc.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="CompoundInterestCalc.resx">
       <DependentUpon>CompoundInterestCalc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmOpenMenu.resx">
+      <DependentUpon>frmOpenMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MortgageCalc.resx">
+      <DependentUpon>MortgageCalc.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

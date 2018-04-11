@@ -16,7 +16,7 @@ namespace MortgageCalculator
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmCompound());
+            Application.Run(new frmOpenMenu());
         }
     }
 }

@@ -26,13 +26,7 @@ namespace MortgageCalculator
                 {
                     throw new Exception("Please fill in all white text boxes with information, so a proper calculation can be done.");
                 }
-                //else if (cbCompoundRates.SelectedItem.ToString() != "Annually" || 
-                //        cbCompoundRates.SelectedItem.ToString() != "Semi-Annually" || 
-                //        cbCompoundRates.SelectedItem.ToString() != "Quarterly" || 
-                //        cbCompoundRates.SelectedItem.ToString() != "Monthly" )
-                //{
-                //    throw new Exception("Please only use the recommended compounding rates.");
-                //}
+
                 else
                 {
                     string a = Financial.CompoundInterest(txtInitial.Text, txtInterest.Text, txtMonthDepo.Text, txtYears.Text, cbCompoundRates.SelectedItem.ToString());
@@ -50,6 +44,7 @@ namespace MortgageCalculator
         {
             try
             {
+
                 txtInitial.Text = "";
                 txtInterest.Text = "";
                 txtMonthDepo.Text = "";
@@ -58,22 +53,21 @@ namespace MortgageCalculator
 
                 cbCompoundRates.ResetText();
                 cbCompoundRates.SelectedIndex = -1;
+                this.DialogResult = DialogResult.None;
             }
             catch (Exception ex)
             {
-                throw ex;
+                MessageBox.Show(ex.Message);
             }
         }
 
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Close();
+
+            Close();
         }
 
-        private void mortgageCalculatorToolStripMenuItem_Click(object sender, EventArgs e)
-        {
 
-        }
     }
 }
