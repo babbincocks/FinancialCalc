@@ -25,7 +25,7 @@ namespace MortgageCalculator
                 //numeric. The only field that doesn't need to be checked for this is the compound rate 
                 //(that is taken care of elsewhere).
 
-                if (!double.TryParse(initial, out double a)|| !double.TryParse(interestRate, out double b) || !double.TryParse(depositAmount, out double c) || !double.TryParse(lengthInYears, out double d))
+                if (!double.TryParse(initial, out double a) || !double.TryParse(interestRate, out double b) || !double.TryParse(depositAmount, out double c) || !double.TryParse(lengthInYears, out double d))
                 {
                     throw new Exception("All fields you enter information into, except for Yearly Compound Rate, should be only numbers.");
                 }
@@ -54,8 +54,9 @@ namespace MortgageCalculator
                 }
 
                 /*
-                 The following if-else-if set is what actually sets the value of the compounding rate. On the side
-                 of the interface, there just needs to be a set way to 
+                 The following if-else-if set is what actually sets the value of the compounding rate. On the operative side
+                 of the form, there just needs to be a set way to have the user put in these values (which this
+                 program does have).
                 */
                 if (compoundRate == "Annually")
                 {
@@ -78,14 +79,32 @@ namespace MortgageCalculator
 
                 }
                 else
-                {
-                    throw new Exception("Please only use the recommended compounding rates.");
+                {   //If none of the values are met, an exception is thrown, telling the user to only use one of 
+                    //those four compounding rates.
+
+                    throw new Exception("Please only use the recommended compounding rates (Annually, Semi-Annually, Quarterly, and Monthly)");
+
                 }
+
+                /*
+                 These two variables were created solely to make the following calculations appear a
+                 bit cleaner, as their values show up multiple times throughout.
+                 */
                 double idc = interest / compound;
                 double cty = compound * years;
 
                 if (compound == 1)
                 {
+                    /*
+                     This is the first calculation done, to find how much extra value is added
+                     to the bank account's total due to a monthly deposit. They all follow the same
+                     formula (the source of which can be found in the "Resources" form that I created
+                     that is linked to the Compound Interest Calculator. The reason for the if-else-if
+                     set is that the compounding rate makes a difference to how much is calculated.
+                     To sum up the difference, the initial deposit needs to be multiplied by how many
+                     months there are in each compounding period: Annual is multiplied by 12, Semi-Annual
+                     is multiplied by 6, etc.
+                     */
                     depositTotal = (deposit * 12) * ((Math.Pow((1 + idc), cty) - 1) / idc);
                 }
                 else if (compound == 2)
@@ -101,9 +120,15 @@ namespace MortgageCalculator
                     depositTotal = deposit * ((Math.Pow((1 + idc), cty) - 1) / idc);
                 }
 
+                /*
+                 Then the actual total is calculated by using the formula that is also linked in the
+                 Resources form, and the total without any deposits, and the deposit total are added
+                 together to get the true total.
+                 */
                 total = principal * Math.Pow((1 + idc), cty);
                 total = total + depositTotal;
 
+                //Then, of course, the total is returned in a currency format.
                 return total.ToString("c");
             }
             catch (Exception ex)
@@ -112,13 +137,39 @@ namespace MortgageCalculator
             }
         }
 
-        public static string Mortgage(string originalAmount, string downPayment, string amountLoaned, string loanLength, string interestRate)
-        {
-            double total = 0;
+
+
+        public static Tuple<string, string, string, string> Mortgage(string originalAmount, string downPayment, string amountLoaned, string lengthOfLoan, string interestRate)
+        {   //This is the code for the function that calculates Mortgage.
+            try
+            {
+
+                double absTotal = 0;
+                double monthly = 0;
+                double intTotal = 0;
+                string payoff = "";
+               
+                double initial = double.Parse(originalAmount);
+                double down = double.Parse(downPayment);
+                double loan = double.Parse(amountLoaned);
+                double loanLength = double.Parse(lengthOfLoan);
+                double rate = double.Parse(interestRate);
+                    rate = rate / 1200;
+
+                monthly = loan * ((rate * (Math.Pow(1 + rate, loanLength))) / (Math.Pow(1 + rate, loanLength)) - 1);
 
 
 
-            return total.ToString("c");
+                var output = Tuple.Create<string, string, string, string>(monthly.ToString(), payoff, intTotal.ToString(), absTotal.ToString());
+                return output;
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
         }
+
     }
 }

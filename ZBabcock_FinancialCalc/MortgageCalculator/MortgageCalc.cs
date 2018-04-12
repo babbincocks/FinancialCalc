@@ -22,12 +22,35 @@ namespace MortgageCalculator
             this.Close();
         }
 
-        private void compoundInterestToolStripMenuItem_Click(object sender, EventArgs e)
+        private void btnCalc_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            frmCompound a = new frmCompound();
-            a.ShowDialog();
-            this.Close();
+            try
+            {
+                var output = Financial.Mortgage(txtInitial.Text, txtDown.Text, txtLoanAmt.Text, txtLoanLength.Text, txtInterest.Text);
+                otxtMonth.Text = output.Item1;
+                otxtPayoff.Text = output.Item2;
+                otxtIntTotal.Text = output.Item3;
+                otxtAbsTotal.Text = output.Item4;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            txtInitial.Text = "";
+            txtDown.Text = "";
+            txtLoanAmt.Text = "";
+            txtLoanLength.Text = "";
+            txtInterest.Text = "";
+            otxtMonth.Text = "";
+            otxtPayoff.Text = "";
+            otxtIntTotal.Text = "";
+            otxtAbsTotal.Text = "";
+            
+            this.DialogResult = DialogResult.None;
         }
     }
 }

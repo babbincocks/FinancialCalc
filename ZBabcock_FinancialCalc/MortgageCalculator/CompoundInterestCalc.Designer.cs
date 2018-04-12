@@ -42,12 +42,12 @@
             this.cbCompoundRates = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.gbAttributes = new System.Windows.Forms.GroupBox();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.msCompoundBar = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label6 = new System.Windows.Forms.Label();
             this.gbAttributes.SuspendLayout();
-            this.menuStrip1.SuspendLayout();
+            this.msCompoundBar.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtInitial
@@ -184,15 +184,15 @@
             this.gbAttributes.TabStop = false;
             this.gbAttributes.Text = "Factors";
             // 
-            // menuStrip1
+            // msCompoundBar
             // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.msCompoundBar.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(397, 24);
-            this.menuStrip1.TabIndex = 17;
-            this.menuStrip1.Text = "menuStrip1";
+            this.msCompoundBar.Location = new System.Drawing.Point(0, 0);
+            this.msCompoundBar.Name = "msCompoundBar";
+            this.msCompoundBar.Size = new System.Drawing.Size(397, 24);
+            this.msCompoundBar.TabIndex = 17;
+            this.msCompoundBar.Text = "menuStrip1";
             // 
             // fileToolStripMenuItem
             // 
@@ -205,7 +205,7 @@
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(100, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -230,15 +230,15 @@
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnCalc);
             this.Controls.Add(this.txtOutput);
-            this.Controls.Add(this.menuStrip1);
+            this.Controls.Add(this.msCompoundBar);
             this.HelpButton = true;
-            this.MainMenuStrip = this.menuStrip1;
+            this.MainMenuStrip = this.msCompoundBar;
             this.Name = "frmCompound";
             this.Text = "Compound Interest";
             this.gbAttributes.ResumeLayout(false);
             this.gbAttributes.PerformLayout();
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
+            this.msCompoundBar.ResumeLayout(false);
+            this.msCompoundBar.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -260,7 +260,7 @@
         private System.Windows.Forms.ComboBox cbCompoundRates;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.GroupBox gbAttributes;
-        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.MenuStrip msCompoundBar;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.Label label6;
