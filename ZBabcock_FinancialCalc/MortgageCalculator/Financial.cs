@@ -143,7 +143,7 @@ namespace MortgageCalculator
         {   //This is the code for the function that calculates Mortgage.
             try
             {
-
+                double total = 0;
                 double absTotal = 0;
                 double monthly = 0;
                 double intTotal = 0;
@@ -156,11 +156,16 @@ namespace MortgageCalculator
                 double rate = double.Parse(interestRate);
                     rate = rate / 1200;
 
-                monthly = loan * ((rate * (Math.Pow(1 + rate, loanLength))) / (Math.Pow(1 + rate, loanLength)) - 1);
+                double inRate = rate + 1;
+                inRate = Math.Pow(inRate, loanLength);
+               // monthly = loan * ((rate * (Math.Pow(1 + rate, loanLength))) / (Math.Pow(1 + rate, loanLength)) - 1);
+                monthly = ((loan - down) * ((rate * inRate)) / (inRate - 1));
+                total = monthly * loanLength;
+                
+                intTotal = total - loan;
 
 
-
-                var output = Tuple.Create<string, string, string, string>(monthly.ToString(), payoff, intTotal.ToString(), absTotal.ToString());
+                var output = Tuple.Create<string, string, string, string>(monthly.ToString("c"), payoff, intTotal.ToString(), absTotal.ToString());
                 return output;
 
             }

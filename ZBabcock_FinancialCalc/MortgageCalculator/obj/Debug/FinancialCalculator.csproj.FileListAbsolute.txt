@@ -20,3 +20,14 @@ C:\Users\Cyberadmin\Desktop\FinancialCalc\ZBabcock_FinancialCalc\MortgageCalcula
 C:\Users\Cyberadmin\Desktop\FinancialCalc\ZBabcock_FinancialCalc\MortgageCalculator\obj\Debug\MortgageCalculator.pdb
 C:\Users\Cyberadmin\Desktop\FinancialCalc\ZBabcock_FinancialCalc\MortgageCalculator\obj\Debug\MortgageCalculator.frmMortgage.resources
 C:\Users\Cyberadmin\Desktop\FinancialCalc\ZBabcock_FinancialCalc\MortgageCalculator\obj\Debug\MortgageCalculator.frmOpenMenu.resources
+C:\Users\MTCStudent\Desktop\FinancialCalc\ZBabcock_FinancialCalc\MortgageCalculator\bin\Debug\MortgageCalculator.exe.config
+C:\Users\MTCStudent\Desktop\FinancialCalc\ZBabcock_FinancialCalc\MortgageCalculator\bin\Debug\MortgageCalculator.exe
+C:\Users\MTCStudent\Desktop\FinancialCalc\ZBabcock_FinancialCalc\MortgageCalculator\bin\Debug\MortgageCalculator.pdb
+C:\Users\MTCStudent\Desktop\FinancialCalc\ZBabcock_FinancialCalc\MortgageCalculator\obj\Debug\FinancialCalculator.csprojResolveAssemblyReference.cache
+C:\Users\MTCStudent\Desktop\FinancialCalc\ZBabcock_FinancialCalc\MortgageCalculator\obj\Debug\MortgageCalculator.frmCompound.resources
+C:\Users\MTCStudent\Desktop\FinancialCalc\ZBabcock_FinancialCalc\MortgageCalculator\obj\Debug\MortgageCalculator.frmOpenMenu.resources
+C:\Users\MTCStudent\Desktop\FinancialCalc\ZBabcock_FinancialCalc\MortgageCalculator\obj\Debug\MortgageCalculator.frmMortgage.resources
+C:\Users\MTCStudent\Desktop\FinancialCalc\ZBabcock_FinancialCalc\MortgageCalculator\obj\Debug\MortgageCalculator.Properties.Resources.resources
+C:\Users\MTCStudent\Desktop\FinancialCalc\ZBabcock_FinancialCalc\MortgageCalculator\obj\Debug\FinancialCalculator.csproj.GenerateResource.Cache
+C:\Users\MTCStudent\Desktop\FinancialCalc\ZBabcock_FinancialCalc\MortgageCalculator\obj\Debug\MortgageCalculator.exe
+C:\Users\MTCStudent\Desktop\FinancialCalc\ZBabcock_FinancialCalc\MortgageCalculator\obj\Debug\MortgageCalculator.pdb
