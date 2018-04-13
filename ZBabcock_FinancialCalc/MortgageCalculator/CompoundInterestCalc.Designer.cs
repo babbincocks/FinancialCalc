@@ -46,6 +46,8 @@
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label6 = new System.Windows.Forms.Label();
+            this.resourcesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.lblTitle = new System.Windows.Forms.Label();
             this.gbAttributes.SuspendLayout();
             this.msCompoundBar.SuspendLayout();
             this.SuspendLayout();
@@ -197,6 +199,7 @@
             // fileToolStripMenuItem
             // 
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.resourcesToolStripMenuItem,
             this.exitToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(56, 20);
@@ -218,13 +221,31 @@
             this.label6.TabIndex = 18;
             this.label6.Text = "Final Total";
             // 
+            // resourcesToolStripMenuItem
+            // 
+            this.resourcesToolStripMenuItem.Name = "resourcesToolStripMenuItem";
+            this.resourcesToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.resourcesToolStripMenuItem.Text = "Resources";
+            this.resourcesToolStripMenuItem.Click += new System.EventHandler(this.resourcesToolStripMenuItem_Click);
+            // 
+            // lblTitle
+            // 
+            this.lblTitle.Font = new System.Drawing.Font("Lucida Bright", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.Location = new System.Drawing.Point(262, 49);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(121, 78);
+            this.lblTitle.TabIndex = 19;
+            this.lblTitle.Text = "Compound Interest Calculator";
+            // 
             // frmCompound
             // 
             this.AcceptButton = this.btnCalc;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.CancelButton = this.btnClear;
             this.ClientSize = new System.Drawing.Size(397, 339);
+            this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.gbAttributes);
             this.Controls.Add(this.btnClear);
@@ -264,6 +285,8 @@
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ToolStripMenuItem resourcesToolStripMenuItem;
+        private System.Windows.Forms.Label lblTitle;
     }
 }
 

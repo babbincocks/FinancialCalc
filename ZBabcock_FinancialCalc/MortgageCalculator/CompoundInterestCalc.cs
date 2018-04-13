@@ -11,7 +11,7 @@ using System.Windows.Forms;
 namespace MortgageCalculator
 {
     public partial class frmCompound : Form
-    {
+    {   //This is the code for the Compound Interest Calculator form.
         public frmCompound()
         {
             InitializeComponent();
@@ -92,6 +92,10 @@ namespace MortgageCalculator
             Close();
         }
 
-
+        private void resourcesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmCompoundResource a = new frmCompoundResource();
+            a.ShowDialog();
+        }
     }
 }

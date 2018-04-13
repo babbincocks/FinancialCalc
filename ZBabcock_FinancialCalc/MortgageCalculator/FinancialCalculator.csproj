@@ -52,6 +52,18 @@
     <Compile Include="CompoundInterestCalc.Designer.cs">
       <DependentUpon>CompoundInterestCalc.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmCompoundResource.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCompoundResource.Designer.cs">
+      <DependentUpon>frmCompoundResource.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMortgageResources.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMortgageResources.Designer.cs">
+      <DependentUpon>frmMortgageResources.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmOpenMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -69,6 +81,12 @@
     <EmbeddedResource Include="CompoundInterestCalc.resx">
       <DependentUpon>CompoundInterestCalc.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmCompoundResource.resx">
+      <DependentUpon>frmCompoundResource.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMortgageResources.resx">
+      <DependentUpon>frmMortgageResources.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmOpenMenu.resx">
       <DependentUpon>frmOpenMenu.cs</DependentUpon>
     </EmbeddedResource>
@@ -83,6 +101,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -96,6 +115,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\InvestorGov.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TheCalculatorSite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BankRate.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WikiHow.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

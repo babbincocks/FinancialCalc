@@ -139,33 +139,78 @@ namespace MortgageCalculator
 
 
 
-        public static Tuple<string, string, string, string> Mortgage(string originalAmount, string downPayment, string amountLoaned, string lengthOfLoan, string interestRate)
+        public static Tuple<string, string, string, string> Mortgage(string originalAmount, string downPayment, string amountLoaned, string lengthOfLoan, string interestRate, string startDate)
         {   //This is the code for the function that calculates Mortgage.
             try
             {
-                double total = 0;
+                if (startDate == "")
+                {
+
+                }
+                //First off, all of the result variables (the variables that will be used in the output tuple)
+                //are declared first, with default values.
                 double absTotal = 0;
                 double monthly = 0;
                 double intTotal = 0;
-                string payoff = "";
-               
+                DateTime payoff = new DateTime(1900, 1, 1);
+
+                //Then there are all of the variables that gain their values from the user inputs.
+                DateTime loanStart = DateTime.Parse(startDate);
                 double initial = double.Parse(originalAmount);
                 double down = double.Parse(downPayment);
                 double loan = double.Parse(amountLoaned);
-                double loanLength = double.Parse(lengthOfLoan);
+                int loanLength = int.Parse(lengthOfLoan);
                 double rate = double.Parse(interestRate);
+
+                //This is a quick check to make sure that the amount for the initial value and the down
+                //payment subtract to equal how much is being loaned; that way there aren't stray dollars
+                //being thrown around.
+                if (initial - down != loan)
+                {
+                    throw new Exception("You have unaccounted money in the loan. The loan should not differentiate from the initial amount minus the down payment.");
+                }
+
+                //This turns the annual rate that the user input (which should be, for example, "5")
+                //into a percentage, and then a monthly rate, which would be dividing it by 100,
+                //and then by 12, but just doing 1200 does the exact same thing.
                     rate = rate / 1200;
 
+                /* 
+                These next three lines are the all of the calculations to get the monthly
+                payment amount. It's a bit split up to make things easier on the eyes and ensure
+                the order of operations are in the proper order. As the calculation of (rate + 1)
+                to the power of the length of the loan shows up twice in the formula, that is turned
+                into a variable.
+                */
                 double inRate = rate + 1;
                 inRate = Math.Pow(inRate, loanLength);
-               // monthly = loan * ((rate * (Math.Pow(1 + rate, loanLength))) / (Math.Pow(1 + rate, loanLength)) - 1);
-                monthly = ((loan - down) * ((rate * inRate)) / (inRate - 1));
-                total = monthly * loanLength;
-                
-                intTotal = total - loan;
+                monthly = (loan * ((rate * inRate)) / (inRate - 1));
 
+                /*
+                This is the calculation for the entire total that the user would have to worry
+                about. Quite simply, it takes the monthly payment, and multiplies by how many
+                times that payment would have to be made.
+                */
+                absTotal = monthly * loanLength;
 
-                var output = Tuple.Create<string, string, string, string>(monthly.ToString("c"), payoff, intTotal.ToString(), absTotal.ToString());
+                /*
+                 This retrieves how much interest would accrue from the loan, taking the amount
+                 that the user would pay, and subtracting how much they were loaned.
+                 */
+                intTotal = absTotal - loan;
+
+                /*
+                 The date that the loan would be paid off is calculated by adding the length of the
+                 loan to when the loan starts, which is both unsurprising and very, very simple.
+                 */
+                payoff = loanStart.AddMonths(loanLength);
+
+                /*
+                 Finally, these previous 4 variable we've gotten the values of are put into a new
+                 tuple, where they are all converted into string format, and that tuple is returned
+                 from the function.
+                 */
+                var output = Tuple.Create<string, string, string, string>(monthly.ToString("c"), payoff.ToString("yyyy/MM/dd"), intTotal.ToString("c"), absTotal.ToString("c"));
                 return output;
 
             }
