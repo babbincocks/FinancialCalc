@@ -12,7 +12,7 @@ using System.Diagnostics;
 namespace MortgageCalculator
 {
     public partial class frmMortgageResources : Form
-    {
+    {   //This is the code for the form that displays the resources used in making the Mortgage calculator.
         public frmMortgageResources()
         {
             InitializeComponent();

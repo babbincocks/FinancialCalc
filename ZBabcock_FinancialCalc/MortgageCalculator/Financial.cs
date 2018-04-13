@@ -143,12 +143,21 @@ namespace MortgageCalculator
         {   //This is the code for the function that calculates Mortgage.
             try
             {
+                //Just as a precaution, to start off, if the starting date is left null, it defaults to the current date.
                 if (startDate == "")
                 {
-
+                    startDate = DateTime.Today.ToString();
                 }
-                //First off, all of the result variables (the variables that will be used in the output tuple)
-                //are declared first, with default values.
+
+                //This is a bit more preliminary error handling. This checks to see that all fields are comprised of only numeric values. If any
+                //field has something other than a number in it (i.e. someone puts "July 31st, 2015" in the start date), it will throw an exception.
+                if (!double.TryParse(originalAmount, out double a) || !double.TryParse(downPayment, out double b) || !double.TryParse(amountLoaned, out double c) || !double.TryParse(lengthOfLoan, out double d) || !double.TryParse(interestRate, out double e) || !DateTime.TryParse(startDate, out DateTime f))
+                {
+                    throw new Exception("Only numbers are allowed in any of the text fields. Be sure that all of your information is comprised of ONLY numbers.");
+                }
+
+                //Now all of the result variables (the variables that will be used in the output tuple)
+                //are declared, along with their default values.
                 double absTotal = 0;
                 double monthly = 0;
                 double intTotal = 0;
@@ -176,7 +185,7 @@ namespace MortgageCalculator
                     rate = rate / 1200;
 
                 /* 
-                These next three lines are the all of the calculations to get the monthly
+                These next three lines are all of the calculations needed to get the monthly
                 payment amount. It's a bit split up to make things easier on the eyes and ensure
                 the order of operations are in the proper order. As the calculation of (rate + 1)
                 to the power of the length of the loan shows up twice in the formula, that is turned
@@ -188,7 +197,7 @@ namespace MortgageCalculator
 
                 /*
                 This is the calculation for the entire total that the user would have to worry
-                about. Quite simply, it takes the monthly payment, and multiplies by how many
+                about. Quite simply, it takes the monthly payment, and multiplies it by how many
                 times that payment would have to be made.
                 */
                 absTotal = monthly * loanLength;
@@ -206,7 +215,7 @@ namespace MortgageCalculator
                 payoff = loanStart.AddMonths(loanLength);
 
                 /*
-                 Finally, these previous 4 variable we've gotten the values of are put into a new
+                 Finally, these previous 4 variables we've gotten the values of are put into a new
                  tuple, where they are all converted into string format, and that tuple is returned
                  from the function.
                  */

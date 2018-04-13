@@ -56,7 +56,7 @@
             // 
             this.pbInvestorGov.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pbInvestorGov.Image = global::MortgageCalculator.Properties.Resources.InvestorGov;
-            this.pbInvestorGov.Location = new System.Drawing.Point(12, 12);
+            this.pbInvestorGov.Location = new System.Drawing.Point(12, 16);
             this.pbInvestorGov.Name = "pbInvestorGov";
             this.pbInvestorGov.Size = new System.Drawing.Size(327, 92);
             this.pbInvestorGov.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -75,7 +75,7 @@
             // 
             // label2
             // 
-            this.label2.Location = new System.Drawing.Point(4, 43);
+            this.label2.Location = new System.Drawing.Point(1, 43);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(179, 58);
             this.label2.TabIndex = 3;
@@ -86,18 +86,18 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Location = new System.Drawing.Point(265, 127);
+            this.groupBox1.Location = new System.Drawing.Point(265, 120);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(189, 140);
+            this.groupBox1.Size = new System.Drawing.Size(183, 147);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.label1);
-            this.groupBox2.Location = new System.Drawing.Point(345, 12);
+            this.groupBox2.Location = new System.Drawing.Point(339, 10);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(109, 92);
+            this.groupBox2.Size = new System.Drawing.Size(109, 98);
             this.groupBox2.TabIndex = 5;
             this.groupBox2.TabStop = false;
             // 

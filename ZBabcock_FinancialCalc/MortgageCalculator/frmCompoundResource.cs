@@ -12,7 +12,7 @@ using System.Diagnostics;
 namespace MortgageCalculator
 {
     public partial class frmCompoundResource : Form
-    {
+    {   //This is the code for the form that displays the resources used in making the Compound Interest calculator.
         public frmCompoundResource()
         {
             InitializeComponent();

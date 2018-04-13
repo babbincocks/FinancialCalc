@@ -94,6 +94,8 @@ namespace MortgageCalculator
 
         private void resourcesToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            ////This is for the menu bar, specifically the "Resources" option. Clicking that will open a new form that will display Resources used
+            //in the making of this part of the program.
             frmCompoundResource a = new frmCompoundResource();
             a.ShowDialog();
         }

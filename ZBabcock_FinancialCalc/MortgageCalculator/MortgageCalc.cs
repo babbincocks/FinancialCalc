@@ -31,7 +31,9 @@ namespace MortgageCalculator
                 /*
                 To begin, a variable is declared that uses the Mortgage function in the Financial class.
                 It's declared as a var data type, as it's going to be handling a tuple, due to
-                the nature of the program. It will return four different values, which are assigned to
+                the nature of the program. 
+                
+                It will return four different values, which are assigned to
                 the output text boxes that I desire: the first item is the monthly payment amount, 
                 the second item is the payoff date, the third is the total interest, and the fourth
                 is the absolute total.
@@ -141,6 +143,8 @@ namespace MortgageCalculator
 
         private void resourcesToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            //This is for the menu bar, specifically the "Resources" option. Clicking that will open a new form that will display Resources used
+            //in the making of this part of the program.
             frmMortgageResources a = new frmMortgageResources();
             a.ShowDialog();
         }

@@ -33,3 +33,5 @@ C:\Users\MTCStudent\Desktop\FinancialCalc\ZBabcock_FinancialCalc\MortgageCalcula
 C:\Users\MTCStudent\Desktop\FinancialCalc\ZBabcock_FinancialCalc\MortgageCalculator\obj\Debug\MortgageCalculator.pdb
 C:\Users\Cyberadmin\Desktop\FinancialCalc\ZBabcock_FinancialCalc\MortgageCalculator\obj\Debug\MortgageCalculator.frmCompoundResource.resources
 C:\Users\Cyberadmin\Desktop\FinancialCalc\ZBabcock_FinancialCalc\MortgageCalculator\obj\Debug\MortgageCalculator.frmMortgageResources.resources
+C:\Users\MTCStudent\Desktop\FinancialCalc\ZBabcock_FinancialCalc\MortgageCalculator\obj\Debug\MortgageCalculator.frmCompoundResource.resources
+C:\Users\MTCStudent\Desktop\FinancialCalc\ZBabcock_FinancialCalc\MortgageCalculator\obj\Debug\MortgageCalculator.frmMortgageResources.resources
