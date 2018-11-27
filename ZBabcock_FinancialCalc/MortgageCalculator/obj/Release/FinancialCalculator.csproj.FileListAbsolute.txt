@@ -1,0 +1,13 @@
+C:\Users\Cyberadmin\Desktop\FinancialCalc\ZBabcock_FinancialCalc\MortgageCalculator\bin\Release\MortgageCalculator.exe.config
+C:\Users\Cyberadmin\Desktop\FinancialCalc\ZBabcock_FinancialCalc\MortgageCalculator\bin\Release\MortgageCalculator.exe
+C:\Users\Cyberadmin\Desktop\FinancialCalc\ZBabcock_FinancialCalc\MortgageCalculator\bin\Release\MortgageCalculator.pdb
+C:\Users\Cyberadmin\Desktop\FinancialCalc\ZBabcock_FinancialCalc\MortgageCalculator\obj\Release\MortgageCalculator.frmCompound.resources
+C:\Users\Cyberadmin\Desktop\FinancialCalc\ZBabcock_FinancialCalc\MortgageCalculator\obj\Release\MortgageCalculator.frmCompoundResource.resources
+C:\Users\Cyberadmin\Desktop\FinancialCalc\ZBabcock_FinancialCalc\MortgageCalculator\obj\Release\MortgageCalculator.frmMortgageResources.resources
+C:\Users\Cyberadmin\Desktop\FinancialCalc\ZBabcock_FinancialCalc\MortgageCalculator\obj\Release\MortgageCalculator.frmOpenMenu.resources
+C:\Users\Cyberadmin\Desktop\FinancialCalc\ZBabcock_FinancialCalc\MortgageCalculator\obj\Release\MortgageCalculator.frmMortgage.resources
+C:\Users\Cyberadmin\Desktop\FinancialCalc\ZBabcock_FinancialCalc\MortgageCalculator\obj\Release\MortgageCalculator.Properties.Resources.resources
+C:\Users\Cyberadmin\Desktop\FinancialCalc\ZBabcock_FinancialCalc\MortgageCalculator\obj\Release\FinancialCalculator.csproj.GenerateResource.cache
+C:\Users\Cyberadmin\Desktop\FinancialCalc\ZBabcock_FinancialCalc\MortgageCalculator\obj\Release\FinancialCalculator.csproj.CoreCompileInputs.cache
+C:\Users\Cyberadmin\Desktop\FinancialCalc\ZBabcock_FinancialCalc\MortgageCalculator\obj\Release\MortgageCalculator.exe
+C:\Users\Cyberadmin\Desktop\FinancialCalc\ZBabcock_FinancialCalc\MortgageCalculator\obj\Release\MortgageCalculator.pdb
